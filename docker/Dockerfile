@@ -1,6 +1,6 @@
-FROM alpine
-RUN apk update
-RUN apk add --no-cache curl wget busybox-extras netcat-openbsd python py-pip bash && \
+FROM centos
+RUN yum update
+RUN yum install curl wget busybox-extras netcat-openbsd python py-pip bash && \
     pip install awscli
-RUN apk --purge -v del py-pip
+
 CMD tail -f /dev/null

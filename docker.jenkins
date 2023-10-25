@@ -16,10 +16,9 @@ pipeline {
             steps {
                 echo " ============== start building image =================="
                 dir ('docker') {
-                	sh 'docker build -t bonhead/my_alpine:latest . '
+                	sh 'docker build . '
                 }
             }
         }
-        
-    }
+}
 

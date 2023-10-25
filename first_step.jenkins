@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage("First step") {
             steps {
-                sh 'ssh ec2-user@st1 \'hostname\''
+                sh 'ssh ec2-user@st1 \'sudo hostname\''
             }
         }
         stage("Second step") {

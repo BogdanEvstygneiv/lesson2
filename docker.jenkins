@@ -11,17 +11,7 @@ pipeline {
         buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
         timestamps()
     }
-    stages {
-        stage("docker login") {
-            steps {
-                echo " ============== docker login =================="
-                withCredentials([usernamePassword(credentialsId: 'bonhead', usernameVariable: 'bonhead', passwordVariable: 'Nhjatq1984!')]) {
-                    sh """
-                    docker login -u $USERNAME -p $PASSWORD
-                    """
-                }
-            }
-        }
+   
         stage("create docker image") {
             steps {
                 echo " ============== start building image =================="
@@ -30,13 +20,6 @@ pipeline {
                 }
             }
         }
-        stage("docker push") {
-            steps {
-                echo " ============== start pushing image =================="
-                sh '''
-                docker push bonhead/my_alpine:latest
-                '''
-            }
-        }
+        
     }
 }

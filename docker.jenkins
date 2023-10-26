@@ -34,7 +34,7 @@ stage("docker push") {
             steps {
                 echo " ============== start pushing image =================="
                 sh '''
-                docker push semaev/toolbox:latest
+                docker push bonhead/my_alpine:latest
                 '''
             }
         }

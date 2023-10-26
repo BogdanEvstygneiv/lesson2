@@ -16,7 +16,7 @@ pipeline {
             steps {
                 echo " ============== start building image =================="
                 dir ('docker') {
-                	sh 'docker build my_alpine:latest . '
+                	sh 'docker build -t my_alpine:latest . '
                 }
             }
         }

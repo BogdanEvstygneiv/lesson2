@@ -72,6 +72,4 @@ jobs:
           coverage-push-condition: "branch=${{ env.main_branch }}, os=${{ env.main_os }}, python_version=${{ env.main_py_ver }}"
           pre-commit: "${{ env.is_main }}"
           tmate: "${{ env.debug }}"
-    - name: Run Tests
-      run: |
-        python calculator.py
+

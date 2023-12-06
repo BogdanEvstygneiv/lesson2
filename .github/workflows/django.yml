@@ -5,7 +5,7 @@ on:
      branches: 
         - main
 env:
- APP_NAME: "AppName.version.${{github.GITHUB_JOB}}
+ APP_NAME: "AppName.version.$GITHUB_JOB
   
 jobs:
   my_testing:

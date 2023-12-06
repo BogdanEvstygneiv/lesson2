@@ -63,21 +63,7 @@ jobs:
     needs: [my_testing_lint,my_testing_unit]
     
     steps:
-      - name: Print Hello World to Deploy
-        run: | 
-         echo " Hello world Deploy"
-         echo " Name APP ${{env.APP_NAME}}"
-      - name: Print Hostname
-        run: hostname
-      - name: Create a file
-        run: echo "I won't live long" > ${{ env.name_file }}
-
-      - name: Upload Artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: ${{ env.name_file }}-name
-          path: ${{ env.name_file }}
-          retention-days: 5
+      
       - name: What version programm
         run: |
           echo "Docker version"
@@ -87,3 +73,8 @@ jobs:
           echo " AWS Version"
           aws --version
           echo " --------------"
+
+       - name: Docker build
+         uses: cloudposse/github-action-docker-build-push@1.14.0
+         with:
+           file: docker/Dcokerfile

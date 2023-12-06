@@ -75,7 +75,7 @@ jobs:
           echo " --------------"
 
       - name: Docker build
-        uses: cloudposse/github-action-docker-build-push@1.14.0
+        run: docker build -t ${{ env.name }}-name -f ${{ github.workspace }}/docker/Dockerfile
         with:
            file: docker/Dcokerfile
              

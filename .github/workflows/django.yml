@@ -74,7 +74,7 @@ jobs:
           aws --version
           echo " --------------"
 
-       - name: Docker build
-         uses: cloudposse/github-action-docker-build-push@1.14.0
+      - name: Docker build
+        uses: cloudposse/github-action-docker-build-push@1.14.0
          with:
            file: docker/Dcokerfile

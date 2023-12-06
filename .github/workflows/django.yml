@@ -4,8 +4,8 @@ on:
    push:
      branches: 
         - main
-env:
- APP_NAME: "AppName.version.${{env.GITHUB_JOB}}
+#env:
+# APP_NAME: "AppName.version.${{env.GITHUB_JOB}}
   
 jobs:
   my_testing:
@@ -16,8 +16,8 @@ jobs:
     steps:
       - name: Print Hello World
         run: echo " Hello world"
- #     - name: Print Hostname
- #       run: hostname
+      - name: Print Hostname
+        run: hostname
 
   my_deploying:
     

@@ -78,4 +78,6 @@ jobs:
         uses: docker/build-push-action@v5.1.0
         with:
            file: docker/Dockerfile
-           tags: appname:latest  
+           tags: appname:latest
+      - name: Dcoker run
+        uses: CoronelEzequiel/run-docker@v1

@@ -9,7 +9,7 @@ on:
 jobs:
   my_testing:
     
-    runs-on: ubuntu:latest
+    runs-on: ubuntu-latest
 
     
     steps:
@@ -20,7 +20,7 @@ jobs:
 
   my_deploying:
     
-    runs-on: ubuntu:latest
+    runs-on: ubuntu-latest
 
     
     steps:

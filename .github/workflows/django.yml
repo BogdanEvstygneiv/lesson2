@@ -22,7 +22,7 @@ jobs:
         run: hostname
       - name: List Folder
         run: ls -la
-        uses: actions/setup-python@v4.8.0
+      - uses: actions/setup-python@v4.8.0
         with:
            python-version: 3.8
 

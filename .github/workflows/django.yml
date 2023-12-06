@@ -75,7 +75,7 @@ jobs:
           echo " --------------"
 
       - name: Docker build
-        run: docker build -t ${{ env.name }}-name -f ${{ github.workspace }}/docker/Dockerfile
+        uses: docker/build-push-action@v5.1.0
         with:
-           file: docker/Dcokerfile
-             
+           file: docker/Dockerfile
+           tags: ${{APP_NAME}}  

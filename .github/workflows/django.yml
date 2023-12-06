@@ -76,5 +76,6 @@ jobs:
 
       - name: Docker build
         uses: cloudposse/github-action-docker-build-push@1.14.0
-         with:
+        with:
            file: docker/Dcokerfile
+             

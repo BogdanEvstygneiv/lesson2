@@ -2,7 +2,7 @@
 name: My-First-Run
 env:
   APP_NAME: "AppName.version.$GITHUB_RUN_NUMBER"
-  
+  name_file: app.txt
 on: 
    push:
      branches: 
@@ -48,12 +48,12 @@ jobs:
       - name: Print Hostname
         run: hostname
       - name: Create a file
-        run: echo "I won't live long" > ${{ github.workspace }}.txt
+        run: echo "I won't live long" > ${{ env.name_file }}
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ github.workspace }}
-          path: ${{ github.workspace }}.txt
+          name: ${{ env.name_file }}-name
+          path: ${{ env.name_file }}
           retention-days: 5
       

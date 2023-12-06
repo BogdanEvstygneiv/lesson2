@@ -80,5 +80,7 @@ jobs:
            file: docker/Dockerfile
            tags: appname:latest
       - name: Print Login
+        with:
+           username: ${{secrets.Github_User}}
         run: |
            echo " ${{secrets.Github_User}}"

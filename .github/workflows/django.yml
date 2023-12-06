@@ -1,11 +1,13 @@
 ---
 name: My-First-Run
+env:
+  APP_NAME: "AppName.version.$GITHUB_JOB
+  
 on: 
    push:
      branches: 
         - main
-env:
- APP_NAME: "AppName.version.$GITHUB_JOB
+
   
 jobs:
   my_testing:

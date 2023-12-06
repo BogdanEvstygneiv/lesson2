@@ -47,4 +47,13 @@ jobs:
          echo " Name APP ${{env.APP_NAME}}"
       - name: Print Hostname
         run: hostname
+      - name: Create a file
+        run: echo "I won't live long" > my_file.txt
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: my-artifact
+          path: my_file.txt
+          retention-days: 5
       

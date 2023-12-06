@@ -48,12 +48,12 @@ jobs:
       - name: Print Hostname
         run: hostname
       - name: Create a file
-        run: echo "I won't live long" > my_file.txt
+        run: echo "I won't live long" > ${{ github.workspace }}.txt
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: my-artifact
-          path: my_file.txt
+          name: ${{ github.workspace }}
+          path: ${{ github.workspace }}.txt
           retention-days: 5
       

@@ -28,10 +28,10 @@ jobs:
       - name: Upgrade PIP
         run: python -m pip install --upgrade pip
       - name: GIT CLONE
-        uses: actions/checkout@v1
+        uses: actions/checkout@v4
           with:
-              sparse-checkout: |
-                          docker
+            sparse-checkout: |
+                        docker
                           
       - name: List Folder
         run: ls -la

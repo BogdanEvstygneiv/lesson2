@@ -1,7 +1,7 @@
 ---
 name: My-First-Run
 env:
-  APP_NAME: "AppName.version.$GITHUB_RUN_NUMBER"
+  APP_NAME: "AppName-version:$GITHUB_RUN_NUMBER"
   name_file: app.txt
 on: 
    push:
@@ -78,4 +78,4 @@ jobs:
         uses: docker/build-push-action@v5.1.0
         with:
            file: docker/Dockerfile
-           tags: ${{env.APP_NAME}}  
+           tags: appname:latest  

@@ -25,6 +25,8 @@ jobs:
       - uses: actions/setup-python@v4.8.0
         with:
            python-version: 3.8
+      - name: Upgrade PIP
+        run: python -m pip install --upgrade pip
 
   my_deploying:
     

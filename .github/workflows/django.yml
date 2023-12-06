@@ -20,6 +20,8 @@ jobs:
         run: echo " Hello world"
       - name: Print Hostname
         run: hostname
+      - name: List Folder
+        run: ls -la
 
   my_deploying:
     

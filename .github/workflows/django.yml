@@ -30,9 +30,8 @@ jobs:
       - name: GIT CLONE
         uses: actions/checkout@v4
           with:
-            sparse-checkout: |
-                        docker
-                          
+             sparse-checkout: docker
+                  
       - name: List Folder
         run: ls -la
 

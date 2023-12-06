@@ -79,5 +79,6 @@ jobs:
         with:
            file: docker/Dockerfile
            tags: appname:latest
-      - name: Dcoker run
-        uses: CoronelEzequiel/run-docker@v1
+      - name: Print Login
+        run: |
+        echo " ${{secrets.Github_User}}"

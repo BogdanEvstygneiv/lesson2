@@ -4,8 +4,8 @@ on:
    push:
      branches: 
         - main
-#env:
-# APP_NAME: "AppName.version.${{env.GITHUB_JOB}}
+env:
+ APP_NAME: "AppName.version.${{github.GITHUB_JOB}}
   
 jobs:
   my_testing:

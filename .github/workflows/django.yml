@@ -16,8 +16,8 @@ jobs:
     steps:
       - name: Print Hello World
         run: echo " Hello world"
-      - name: Print Hostname
-        run: hostname
+ #     - name: Print Hostname
+ #       run: hostname
 
   my_deploying:
     

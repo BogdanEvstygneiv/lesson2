@@ -3,7 +3,7 @@ name: My-First-Run
 env:
   APP_NAME: "AppName-version:$GITHUB_RUN_NUMBER"
   name_file: app.txt
-  username: ${{secrets.USER}}
+  username: ${{secrets.DCOKERHUB_USERNAME}}
 on: 
    push:
      branches: 
